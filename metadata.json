@@ -1,0 +1,6 @@
+{
+  "name": "DubAI",
+  "description": "DubAI é uma extensão Chrome que dublará seus vídeos on-line em português brasileiro em poucos cliques, com voz natural, quando a plataforma não oferece tradução, o app usa a cota gratuita do modelo Gemma 3 27B (via Gemini) para traduzir e narrar o conteúdo automaticamente.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
