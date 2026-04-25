@@ -4,7 +4,7 @@
   <p><strong>Dublagem de Vídeo em Tempo Real Diretamente no Navegador</strong></p>
 
   <p>
-    <a href="https://juliookuda.github.io/dubai-extension/"><img alt="Site Oficial" src="https://img.shields.io/badge/Site_Oficial-GitHub_Pages-2ea44f?style=flat-square&logo=github&logoColor=white" /></a>
+    <a href="https://jcnok.github.io/DubAI/"><img alt="Site Oficial" src="https://img.shields.io/badge/Site_Oficial-GitHub_Pages-2ea44f?style=flat-square&logo=github&logoColor=white" /></a>
     <img alt="Chrome Extension" src="https://img.shields.io/badge/Chrome_Extension-v1.3.0-4285F4?style=flat-square&logo=google-chrome&logoColor=white" />
     <img alt="Gemini Integration" src="https://img.shields.io/badge/Powered_by-Gemini_&_Gemma-1A73E8?style=flat-square&logo=googlebard&logoColor=white" />
     <img alt="Manifest V3" src="https://img.shields.io/badge/Manifest-V3-success?style=flat-square" />
@@ -34,7 +34,8 @@ Seja para estudar tutoriais complexos ou acompanhar palestras internacionais, o 
 ---
 
 ## 🌐 Acesso Rápido
-👉 **[Acesse o Site Oficial (GitHub Pages) do Projeto para Download da Extensão Pronta](https://juliookuda.github.io/dubai-extension/)**
+👉 **[Acesse o Site Oficial (GitHub Pages) do Projeto para Download da Extensão Pronta](https://jcnok.github.io/DubAI/)**
+
 
 ---
 
@@ -53,7 +54,7 @@ Seja para estudar tutoriais complexos ou acompanhar palestras internacionais, o 
 
 A DubAI ainda não está listada na Chrome Web Store. Para utilizá-la gratuitamente, você deve fazer o download do pacote oficial:
 
-1. **Baixe o pacote:** Acesse o [Site Oficial do projeto](https://juliookuda.github.io/dubai-extension/), clique no botão azul **"Download Extensão (.zip)"**.
+1. **Baixe o pacote:** Acesse o [Site Oficial do projeto](https://jcnok.github.io/DubAI/), clique no botão azul **"Download Extensão (.zip)"**.
 2. **Extraia os arquivos:** Extraia o conteúdo deste arquivo `.zip` para uma **pasta fixa** no seu computador (uma pasta que você não vá apagar depois).
 3. **Abra as extensões:** Abra o Google Chrome e digite na barra de endereços: `chrome://extensions/`.
 4. **Habilite permissões:** No canto superior direito, ative a chave **Modo do Desenvolvedor** (Developer mode).
