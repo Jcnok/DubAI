@@ -19,6 +19,11 @@ export const manifestJSON = `{
       "128": "icon.png"
     }
   },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
   "content_scripts": [
     {
       "matches": [
@@ -124,7 +129,7 @@ export const popupHTML = `<!DOCTYPE html>
   </style>
 </head>
 <body>
-  <h2>🎙️ DubAI (v1.2)</h2>
+  <h2>🎙️ DubAI (v1.3)</h2>
   <p style="font-size: 0.875rem; color: #4b5563; margin-top: -8px;">Transcriação Dinâmica</p>
 
   <label for="opMode">Modo de Operação</label>
