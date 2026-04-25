@@ -879,6 +879,7 @@ export const readmeMD = `<div align="center">
   <p><strong>Dublagem de Vídeo em Tempo Real Diretamente no Navegador</strong></p>
 
   <p>
+    <a href="https://juliookuda.github.io/dubai-extension/"><img alt="Site Oficial" src="https://img.shields.io/badge/Site_Oficial-GitHub_Pages-2ea44f?style=flat-square&logo=github&logoColor=white" /></a>
     <img alt="Chrome Extension" src="https://img.shields.io/badge/Chrome_Extension-v1.3.0-4285F4?style=flat-square&logo=google-chrome&logoColor=white" />
     <img alt="Gemini Integration" src="https://img.shields.io/badge/Powered_by-Gemini_&_Gemma-1A73E8?style=flat-square&logo=googlebard&logoColor=white" />
     <img alt="Manifest V3" src="https://img.shields.io/badge/Manifest-V3-success?style=flat-square" />
@@ -894,6 +895,7 @@ O **DubAI** é uma extensão inteligente e *open-source* para Google Chrome capa
 Seja para estudar tutoriais complexos ou acompanhar palestras internacionais, o DubAI quebra a barreira do idioma sem os custos proibitivos de plataformas fechadas.
 
 ## 📑 Índice
+- [🌐 Acesso Rápido](#-acesso-rápido)
 - [🌟 Principais Recursos](#-principais-recursos)
 - [📦 Como Instalar (Modo Desenvolvedor)](#-como-instalar-modo-desenvolvedor)
 - [⚙️ Como Usar na Prática](#%EF%B8%8F-como-usar-na-prática)
@@ -903,6 +905,11 @@ Seja para estudar tutoriais complexos ou acompanhar palestras internacionais, o 
 - [🤝 Como Contribuir](#-como-contribuir)
 - [📝 Licença](#-licença)
 - [📫 Contato](#-contato)
+
+---
+
+## 🌐 Acesso Rápido
+👉 **[Acesse o Site Oficial (GitHub Pages) do Projeto para Download da Extensão Pronta](https://juliookuda.github.io/dubai-extension/)**
 
 ---
 
@@ -919,19 +926,17 @@ Seja para estudar tutoriais complexos ou acompanhar palestras internacionais, o 
 
 ## 📦 Como Instalar (Modo Desenvolvedor)
 
-Como o DubAI está em fase *Alpha* e você clonou este repositório (via github ou build), siga o passo a passo:
+A DubAI ainda não está listada na Chrome Web Store. Para utilizá-la gratuitamente, você deve fazer o download do pacote oficial:
 
-1. Clone o repositório na sua máquina (ou baixe via .zip pelo site gerador e extraia-o numa pasta permanente):
-   \`\`\`bash
-   git clone https://github.com/seu-usuario/dubai-extension.git
-   \`\`\`
-2. Abra o Google Chrome e digite na barra de endereços: \`chrome://extensions/\`.
-3. No canto superior direito, ative a chave **Modo do Desenvolvedor** (Developer mode).
-4. Clique no botão **Carregar sem compactação** (Load unpacked).
-5. Selecione a pasta raiz onde você clonou ou extraiu o projeto (onde está o arquivo \`manifest.json\`).
-6. O ícone do DubAI aparecerá na sua barra de extensões superior. Fixe-o (pin) para acesso fácil.
+1. **Baixe o pacote:** Acesse o [Site Oficial do projeto](https://juliookuda.github.io/dubai-extension/), clique no botão azul **"Download Extensão (.zip)"**.
+2. **Extraia os arquivos:** Extraia o conteúdo deste arquivo \`.zip\` para uma **pasta fixa** no seu computador (uma pasta que você não vá apagar depois).
+3. **Abra as extensões:** Abra o Google Chrome e digite na barra de endereços: \`chrome://extensions/\`.
+4. **Habilite permissões:** No canto superior direito, ative a chave **Modo do Desenvolvedor** (Developer mode).
+5. **Carregue o pacote:** Clique no botão **Carregar sem compactação** (Load unpacked) no canto superior esquerdo.
+6. **Selecione a pasta:** Escolha a pasta raiz onde você acabou de extrair os arquivos (a pasta que contém o arquivo \`manifest.json\`).
+7. **Pronto:** O ícone do DubAI aparecerá na sua barra de extensões superior. Fixe-o no painel para acesso rápido.
 
-**🚨 Segurança Crítica:** Imediatamente após carregar, acesse a aba de um vídeo, atualize a página (pressione F5) para inicializar a instância de conexão da extensão no navegador de forma limpa.
+**🚨 Segurança Crítica:** Imediatamente após a instalação, acesse a página de qualquer vídeo online e **atualize a página (pressione F5)**. Isso é necessário para inicializar a barreira de comunicação do Google Chrome (\`Service Worker Messaging\`) de forma orgânica.
 
 ---
 
