@@ -873,42 +873,149 @@ async function handleTranslation(text, apiKey, isPreTranscript) {
 
 export const base64Icon = "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfqAw0UDjB65+a4AAABkklEQVRYw+2ZMW7CQBBF/xY06SgFUkWKNAk1JSeg5AA0nICSA3AAEqroOAUSFSVEUqQI0qSjdYBEkZDAXuy1ZyeR1i//vB3tf8bjm13jAgvESABIQoI5Jphghq3y/2xLijXmmCCRoO+qNwxQYYYV1igB8AHgB4BfAKyy/mEDF1gAAZAAkKCFY5xjvI2Z21xggTmWmGGAX2ywxxFHHKPCHEPMMcYRRxzxv8RsgAIGDDEfE0wxQYlZhngVbICfASZYwF12qLDDBb71/v8v0AE9+s+5p0aNGjVq1BjhAQ+49HjAQY0aNWrUqLEHAgxwwAG2uKNEiRY2b4NngH5M4S/AEyDDKHwT1Bzwz9kAf+yCmkO+L9Ac8A7qDngOdQe8gpoDnkDdAa+g5oA3UHPAF6g74BXUHPAF6g74AnUHXIPmXmAGNAc8g5oDXkHdAc+h7oBXUHPAG6g54AvUHfAKag74AnUHXIPmXmAG9NwLvIKae4E3UHMv8AVq7gVeQc29wBeouRdoA/z/i/K0wT8A/X3w1Q73Y+EAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjYtMDMtMTNUMjA6MTQ6MTArMDA6MDCh2KjPAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDI2LTAzLTEzVDIwOjE0OjQ4KzAwOjAwv4/dIgAAAABJRU5ErkJggg==";
 
-export const readmeMD = `# 🎙️ DubAI - Dublagem de Vídeo em Tempo Real (Chrome Extension)
+export const readmeMD = `<div align="center">
+  <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/mic.svg" width="80" alt="DubAI Logo" />
+  <h1>🎙️ DubAI</h1>
+  <p><strong>Dublagem de Vídeo em Tempo Real Diretamente no Navegador</strong></p>
 
-O **DubAI** é uma extensão inteligente para Google Chrome capaz de extrair legendas dinâmicas de plataformas de vídeo (YouTube, Udemy, Anthropic, Coursera, DeepLearning.ai) e gerar uma dublagem sintetizada hiper-realista em Português-BR usando a API do Google ("Gemma 3" ou "Gemini Flash") e algoritmos dinâmicos de sincronização de fala.
+  <p>
+    <img alt="Chrome Extension" src="https://img.shields.io/badge/Chrome_Extension-v1.3.0-4285F4?style=flat-square&logo=google-chrome&logoColor=white" />
+    <img alt="Gemini Integration" src="https://img.shields.io/badge/Powered_by-Gemini_&_Gemma-1A73E8?style=flat-square&logo=googlebard&logoColor=white" />
+    <img alt="Manifest V3" src="https://img.shields.io/badge/Manifest-V3-success?style=flat-square" />
+    <img alt="License MIT" src="https://img.shields.io/badge/License-MIT-green?style=flat-square" />
+    <img alt="Vanilla JS" src="https://img.shields.io/badge/Vanilla-JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+  </p>
+</div>
+
+---
+
+O **DubAI** é uma extensão inteligente e *open-source* para Google Chrome capaz de extrair legendas dinâmicas de plataformas de vídeo (YouTube, Udemy, Coursera, DeepLearning.ai, Anthropic) e gerar uma dublagem sintetizada hiper-realista em Português-BR. Tudo isso em tempo real, utilizando a API do Google ("Gemma 3" ou "Gemini Flash") e algoritmos avançados de sincronização de fala.
+
+Seja para estudar tutoriais complexos ou acompanhar palestras internacionais, o DubAI quebra a barreira do idioma sem os custos proibitivos de plataformas fechadas.
+
+## 📑 Índice
+- [🌟 Principais Recursos](#-principais-recursos)
+- [📦 Como Instalar (Modo Desenvolvedor)](#-como-instalar-modo-desenvolvedor)
+- [⚙️ Como Usar na Prática](#%EF%B8%8F-como-usar-na-prática)
+- [🗂️ Estrutura do Projeto](#-estrutura-do-projeto)
+- [🧠 Arquitetura e Fluxo (Mermaid)](#-arquitetura-e-fluxo)
+- [🛡️ Privacidade e Segurança](#%EF%B8%8F-privacidade-e-segurança)
+- [🤝 Como Contribuir](#-como-contribuir)
+- [📝 Licença](#-licença)
+- [📫 Contato](#-contato)
+
+---
 
 ## 🌟 Principais Recursos
-- **Tradução com IA Otimizada**: Envia pequenos blocos de texto contextuais para preservar precisão na tradução, suportando a nova família _Gemma 3_, além da API padrão do _Gemini_.
-- **Leitor Nativo (Zero Custo)**: Permite dublagem de legendas já nativamente traduzidas pelas plataformas (ex: vídeos já dublados no menu do YouTube), usando apenas síntese offline.
-- **Detecção Avançada (Pre-Transcript)**: Localiza e detecta transcrições completas da barra lateral em estruturas de LMS (ex: Coursera, DeepLearning.ai). Isso faz o carregamento prévio da tradução impedindo falhas em cursos técnicos acelerados.
-- **Sincronização Dinâmica Inteligente**: A extensão utiliza a API de áudio nativa do Chrome. Se a voz demorar ou ficar muito acumulada no buffer, a IA acelera matematicamente ou pausa momentaneamente o player do seu vídeo para garantir que a imagem não atropele o narrador!
-- **Audio Ducking Customizado**: O volume nativo do vídeo é reduzido automaticamente (ducking) enquanto a IA fala, e volta ao normal imediatamente nos intervalos silenciosos!
-- **Download das Transcrições**: Um clique é o suficiente para compilar a transcrição inteira do decorrer de seu vídeo, gerando um .txt ideal para ferramentas LLMs.
 
-## 🚀 Como Instalar (Modo Desenvolvedor)
+- **Tradução com IA Otimizada:** Envia blocos de texto contextuais para preservar precisão na tradução, suportando a nova família *Gemma 3* e a API padrão do *Gemini*.
+- **Leitor Nativo (Zero Custo):** Permite dublagem de legendas já traduzidas pelas próprias plataformas, usando apenas a síntese de voz offline do sistema.
+- **Detecção Avançada (Pre-Transcript):** Localiza e detecta transcrições completas da barra lateral em estruturas de LMS (ex: Coursera, DeepLearning.ai). Isso faz o carregamento prévio da tradução impedindo falhas de buffer em cursos técnicos acelerados.
+- **Sincronização Dinâmica Inteligente:** A IA acelera matematicamente ou pausa momentaneamente o player do seu vídeo para garantir que a imagem não atropele a locução narrativa.
+- **Audio Ducking Customizado:** O volume original do vídeo é reduzido automaticamente (*ducking*) enquanto o DubAI fala, e volta ao normal imediatamente nos silêncios.
+- **Download de Transcrições:** Compile a transcrição inteira do vídeo do momento, gerando um \`.txt\` ideal para consultas com LLMs locais de estudo.
 
-A DubAI ainda não está listada na Chrome Web Store. Para utilizá-la gratuitamente através do repositório/build:
+---
 
-1. Baixe o último build através do pacote em **.zip** via plataforma e extraia-o para uma *pasta fixa*.
-2. Abra o Chrome e navegue pela barra de endereço até: \`chrome://extensions/\`.
-3. No canto superior direito da tela, ative a chave chamada **Modo do Desenvolvedor**.
-4. Clique no botão **Carregar sem compactação** (ou *Load unpacked*).
-5. Selecione a *pasta fixa* onde você extraiu a DubAI.
-6. A extensão fará parte da vida útil do seu navegador. 
+## 📦 Como Instalar (Modo Desenvolvedor)
 
-**🚨 Segurança Crítica:** Imediatamente após a instalação, abra qualquer conteúdo com vídeo no seu navegador e **pressione F5 (Recarregar a página)**. Isto evita erros do \`Chrome Message Sender\` travando a interface ao ser chamada com sessões órfãs.
+Como o DubAI está em fase *Alpha* e você clonou este repositório (via github ou build), siga o passo a passo:
+
+1. Clone o repositório na sua máquina (ou baixe via .zip pelo site gerador e extraia-o numa pasta permanente):
+   \`\`\`bash
+   git clone https://github.com/seu-usuario/dubai-extension.git
+   \`\`\`
+2. Abra o Google Chrome e digite na barra de endereços: \`chrome://extensions/\`.
+3. No canto superior direito, ative a chave **Modo do Desenvolvedor** (Developer mode).
+4. Clique no botão **Carregar sem compactação** (Load unpacked).
+5. Selecione a pasta raiz onde você clonou ou extraiu o projeto (onde está o arquivo \`manifest.json\`).
+6. O ícone do DubAI aparecerá na sua barra de extensões superior. Fixe-o (pin) para acesso fácil.
+
+**🚨 Segurança Crítica:** Imediatamente após carregar, acesse a aba de um vídeo, atualize a página (pressione F5) para inicializar a instância de conexão da extensão no navegador de forma limpa.
+
+---
 
 ## ⚙️ Como Usar na Prática
 
-1. **Configuração da API**: Clique no ícone \`🎙️ DubAI\` na barra do seu navegador. Mude o "Modo de Operação" para \`Tradutor IA\`. Preencha de forma segura utilizando sua própria [Google API Key provida no AI Studio](https://aistudio.google.com/app/apikey).
-2. **Ativando a Legenda do Vídeo**: A mágica dessa extensão é o _DOM reading_. Ou seja, a sua plataforma de vídeos **deve** expor palavras na tela de modo visível ou oculto. Acesse a engrenagem do player do vídeo, ative a opção **CC (Closed Captions) / Legendas originais do áudio**!
-3. Pressione \`Iniciar Dublagem\`. A partir desse momento, tudo deve estar contínuo e orgânico. Em certas plataformas o delay cognitivo pode durar apenas de 1 a 6 segundos inicialmente.
-4. Ajuste na interface o **Tom (Pitch)** e **Velocidade**. Note que o \`DubAI\` respeita o uso de vozes instaladas no seu Sistema Operacional Windows ou macOS. Vozes nativas femininas como a Microsoft Francisca, Google Português Brasil ou masculinas são alinhadas na seleção de \`Locutor\`.
+1. **Configuração da API:** Clique no ícone 🎙️ na barra do navegador. Altere o "Modo de Operação" para **Tradutor IA**. Informe a sua [Google AI Studio API Key](https://aistudio.google.com/app/apikey) (é seguro, fica no armazenamento local Chrome).
+2. **Ative a Legenda no Vídeo:** Acesse o player (YouTube, Udemy, etc.) e ative a opção **CC (Closed Captions) / Legendas do Áudio Original**. O DubAI *lê as engrenagens da web*, então precisa que a legenda esteja aparecendo (mesmo que você depois a oculte via CSS, o elemento deve existir no DOM).
+3. **Inicie a Magia:** Clique em **Iniciar Dublagem** na janela da extensão. 
+4. **Personalize a Fala:** Ajuste *Tradução*, *Tom de Voz* e escolha uma *Voz Masculina/Feminina* baseada no catálogo do seu Sistema Operacional.
 
-## 🛡️ Qualidade, Privacidade e Arquitetura
+---
 
-O código implementado pela DubAI preza por:
-*   **Total Privacidade**: Nenhum dado é mandado ou cacheado para servidores obscuros fora do \`generativelanguage.googleapis.com\`. As chaves de API estão seguradas pelo \`chrome.storage.local\` offline.
-*   **Agnóstico a Infraestrutura**: A ferramenta ignora abstrações confusas. As chamadas ao modelo do Gemini usam as diretrizes nativas rest \`fetch\` em Background Service Worker.
-*   **Sem injecões obscuras**: O \`content.js\` trabalha puramente lendo a interface sem modificar chaves vitais da Web Application.
+## 🗂️ Estrutura do Projeto
+
+O código do DubAI segue as boas práticas do Manifest V3 do Google, separando as lógicas de forma limpa:
+
+\`\`\`text
+├── manifest.json       # O "coração" da extensão. Define permissões (activeTab, storage) e os scripts
+├── popup.html          # Interface do usuário (janela que abre ao clicar no ícone)
+├── popup.js            # Lógica que controla a UI da extensão, botões, e salva preferências
+├── popup.css           # Estilos e design Minimalista (Aparência, cores, botões)
+├── content.js          # Injetado na página do vídeo. Fica "escutando" as legendas no DOM e falando (TTS)
+├── background.js       # Service Worker de fundo. Lida isoladamente com requisições HTTPS para a API do Gemini
+├── README.md           # A documentação que você está lendo agora.
+├── CONTRIBUTING.md     # Guia de passos de como a comunidade pode ajudar a evoluir o app
+└── LICENSE             # Licença open-source MIT
+\`\`\`
+
+---
+
+## 🧠 Arquitetura e Fluxo
+
+Para que não tenhamos vazamento de API KEYs no *DOM / front-end* dos sites, adotamos a seguinte arquitetura de mensagens:
+
+\`\`\`mermaid
+sequenceDiagram
+    participant P as Player de Vídeo (User Tab)
+    participant C as Content Script (Lê Legenda)
+    participant B as Background Worker
+    participant G as Gemini / Gemma API (Google)
+    participant S as SpeechSynthesis (TTS)
+
+    P->>C: Exibe trecho [00:15] "Welcome to AI"
+    C->>C: Detecta mudança no DOM
+    C->>B: chrome.runtime.sendMessage("Welcome to AI", API_KEY)
+    B->>G: POST /gemini:generateContent
+    G-->>B: Retorna Tradução: "Bem vindo à IA"
+    B-->>C: sendResponse("Bem vindo à IA")
+    C->>S: window.speechSynthesis.speak("Bem vindo à IA")
+    S-->>P: Ajusta volume (Ducking) e Toca Áudio
+\`\`\`
+
+---
+
+## 🛡️ Privacidade e Segurança
+
+Seus dados permanecem apenas na sua máquina.
+
+1. **Local Storage First:** Suas chaves de API, preferências de velocidade e modo são salvos via \`chrome.storage.local\`. Nenhum dado sobe para os nossos servidores (porque não temos nenhum!).
+2. **Agnóstico a Infraestrutura:** As chamadas à inteligência do modelo do Google são feitas isoladamente no Service Worker (\`background.js\`). Isso blinda a extensão de *Cross-Site Scripting* em players potencialmente modificados de terceiros.
+3. **Leitura Pura do DOM:** Sem injeções ou scripts mirabolantes de engenharia reversa. Se a legenda está rolando no site, nós lemos a camada exterior e processamos suavemente sem prejudicar a reprodução (DRM ou cache protegido).
+
+---
+
+## 🤝 Como Contribuir
+
+O DubAI é feito pela comunidade para a comunidade. Se você achou um bug no sincronismo, quer ajudar a melhorar as RegExp lógicas de texto do Coursera/YouTube ou apenas melhorar algo visual, veja o nosso **[Guia de Contribuição](CONTRIBUTING.md)**.
+
+⭐ **Gostou do projeto? Considere dar uma estrela neste repositório! É o maior incentivo que a comunidade open-source pode receber.** ⭐
+
+---
+
+## 📝 Licença
+Distribuído sob a licença **MIT**. Você pode baixar, modificar, recriar a arquitetura e rentabilizar de forma livre. Veja o arquivo de [Licença (LICENSE)](LICENSE) para obter todos os detalhes da permissão.
+
+---
+
+## 📫 Contato
+### **Júlio Okuda**
+
+- 📧 **E-mail:** [julio.okuda@gmail.com](mailto:julio.okuda@gmail.com)
+- 💡 Participe da discussão, abra issues e mande PRs e torne a educação baseada em vídeos mais acessível globalmente.
+
+<div align="center">
+  <p>Feito com paixão à educação e Inteligência Artificial. ❤️</p>
+</div>
 `;
